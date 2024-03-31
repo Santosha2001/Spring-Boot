@@ -1,0 +1,15 @@
+body {
+	background: blue;
+}
+
+.container {
+	background: yellow;
+	padding: 20px;
+}
+
+.bird{
+	margin: 30px;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+}

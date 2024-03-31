@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h2>this is thymeleaf fragment tutorial</h2>
+	
+	<!-- INSERT -->
+	<!-- <footer id="hostTag" th:replace="footer::fragment-footer"></footer> -->
+	
+	<!-- REPLACE -->
+	<footer id="hostTag" th:replace="footer::fragment-footer(${title},${subtitle})"></footer> 
+
+	<!-- INCLUDE -->		
+	<!-- <footer id="hostTag" th:include="footer::fragment-footer(${title},${subtitle})"></footer> -->
+	
+</body>
+</html>

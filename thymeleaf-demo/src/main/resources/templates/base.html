@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+	<meta charset="UTF-8" />
+	<title>Base Content page</title>
+	<link rel="stylesheet" th:href="@{/style.css}" />
+</head>
+<body>
+	<h2>this is common header</h2>
+	
+	<div th:replace="${content}"></div>
+	
+	<h2>footer</h2>
+</body>
+</html>

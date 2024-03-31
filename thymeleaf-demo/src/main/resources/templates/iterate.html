@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<h1 th:text="${nameList}"></h1>
+
+	<ul>
+		<li th:each="name : ${nameList}"><span th:text="${name}"></span>
+		</li>
+	</ul>
+	<br>
+	<ul>
+		<li th:each="name,status : ${nameList}"><span
+			th:style="${status.odd} ? 'color: blue' : '' "
+			th:text="${status.index}+ ' ' +${name}"></span></li>
+	</ul>
+</body>
+</html>
