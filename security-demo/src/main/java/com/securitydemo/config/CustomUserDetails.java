@@ -48,5 +48,5 @@ public class CustomUserDetails implements UserDetails {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'isEnabled'");
     }
-    
+
 }
