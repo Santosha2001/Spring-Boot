@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table
-public class CloudVendorAPIService {
+public class CloudVendor {
 
 	@Id
 	private String id;
@@ -14,11 +14,11 @@ public class CloudVendorAPIService {
 	private String address;
 	private String mobile;
 
-	public CloudVendorAPIService() {
+	public CloudVendor() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public CloudVendorAPIService(String id, String name, String address, String mobile) {
+	public CloudVendor(String id, String name, String address, String mobile) {
 		super();
 		this.id = id;
 		this.name = name;

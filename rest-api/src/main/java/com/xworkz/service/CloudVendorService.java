@@ -2,17 +2,17 @@ package com.xworkz.service;
 
 import java.util.List;
 
-import com.xworkz.model.CloudVendorAPIService;
+import com.xworkz.model.CloudVendor;
 
 public interface CloudVendorService {
 
-	String createCloudVendor(CloudVendorAPIService cloudVendorAPIService);
+	String createCloudVendor(CloudVendor cloudVendorAPIService);
 
-	String updateCloudVendor(CloudVendorAPIService cloudVendorAPIService);
+	String updateCloudVendor(CloudVendor cloudVendorAPIService);
 
 	String deleteCloudVendor(String id);
 
-	CloudVendorAPIService getVendors(String id);
+	CloudVendor getVendors(String id);
 
-	List<CloudVendorAPIService> getAllVendors();
+	List<CloudVendor> getAllVendors();
 }

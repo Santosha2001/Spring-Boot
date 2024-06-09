@@ -49,11 +49,21 @@
 			<artifactId>mysql-connector-j</artifactId>
 		</dependency>
 
+		<!--JUnit,assertj,mockito dependencies is bundled with spring boot application no need to include-->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>

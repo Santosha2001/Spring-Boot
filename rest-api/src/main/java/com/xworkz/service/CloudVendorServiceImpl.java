@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.xworkz.exception.CloudVendorNotFoundException;
-import com.xworkz.model.CloudVendorAPIService;
+import com.xworkz.model.CloudVendor;
 import com.xworkz.repository.CloudVendorRepository;
 
 @Service
@@ -15,15 +15,19 @@ public class CloudVendorServiceImpl implements CloudVendorService {
 	@Autowired
 	private CloudVendorRepository repository;
 
-	@Override
-	public String createCloudVendor(CloudVendorAPIService cloudVendorAPIService) {
-
-		repository.save(cloudVendorAPIService);
-		return "Save Success.";
+	public CloudVendorServiceImpl(CloudVendorRepository cloudVendorRepository) {
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public String updateCloudVendor(CloudVendorAPIService cloudVendorAPIService) {
+	public String createCloudVendor(CloudVendor cloudVendorAPIService) {
+
+		repository.save(cloudVendorAPIService);
+		return "Success.";
+	}
+
+	@Override
+	public String updateCloudVendor(CloudVendor cloudVendorAPIService) {
 		repository.save(cloudVendorAPIService);
 		return "Update Success.";
 	}
@@ -35,7 +39,7 @@ public class CloudVendorServiceImpl implements CloudVendorService {
 	}
 
 	@Override
-	public CloudVendorAPIService getVendors(String id) {
+	public CloudVendor getVendors(String id) {
 		
 		if (repository.findById(id).isEmpty()) {
 			throw new CloudVendorNotFoundException("Cloud Vendor not exist");
@@ -44,7 +48,7 @@ public class CloudVendorServiceImpl implements CloudVendorService {
 	}
 
 	@Override
-	public List<CloudVendorAPIService> getAllVendors() {
+	public List<CloudVendor> getAllVendors() {
 
 		return repository.findAll();
 	}
